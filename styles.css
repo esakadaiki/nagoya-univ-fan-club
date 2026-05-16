@@ -148,6 +148,7 @@ main {
 
 #top,
 #about,
+#publications,
 #news,
 #contact {
   scroll-margin-top: 72px;
@@ -337,7 +338,121 @@ main {
 }
 
 /* =========================================================================
-   §03 · News
+   §03 · Publications（会報）
+   ========================================================================= */
+
+.pubs {
+  max-width: var(--col-max);
+  margin: 0 auto;
+  padding: clamp(48px, 7vw, 88px) var(--gutter);
+}
+
+.pubs__head {
+  margin-bottom: clamp(20px, 3vw, 28px);
+}
+
+.pubs__h {
+  margin: 8px 0 0;
+  font-family: var(--f-serif-jp);
+  font-weight: 500;
+  font-size: clamp(22px, 2.8vw, 30px);
+  line-height: 1.55;
+  letter-spacing: 0.02em;
+}
+
+.pubs__body p {
+  margin: 0 0 1em;
+  font-size: clamp(14.5px, 1.3vw, 16px);
+  line-height: 2;
+}
+
+.pubs__issue {
+  display: grid;
+  grid-template-columns: minmax(0, 280px) 1fr;
+  gap: clamp(28px, 5vw, 56px);
+  align-items: start;
+  margin-top: clamp(28px, 4vw, 40px);
+  padding-top: clamp(28px, 4vw, 40px);
+  border-top: 1px solid var(--ink);
+}
+
+.pubs__figure {
+  margin: 0;
+}
+
+.pubs__cover {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--rule);
+}
+
+.pubs__figcaption {
+  display: block;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.pubs__meta {
+  align-self: start;
+}
+
+.pubs__no {
+  display: block;
+  margin: 0 0 8px;
+}
+
+.pubs__title {
+  margin: 0 0 18px;
+  font-family: var(--f-serif-jp);
+  font-weight: 500;
+  font-size: clamp(17px, 1.8vw, 20px);
+  line-height: 1.55;
+  letter-spacing: 0.04em;
+}
+
+.pubs__facts {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.pubs__factRow {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.pubs__factRow dt {
+  margin: 0;
+  align-self: baseline;
+  padding-top: 4px;
+}
+
+.pubs__factRow dd {
+  margin: 0;
+  font-size: clamp(14px, 1.2vw, 15.5px);
+  line-height: 1.75;
+}
+
+@media (max-width: 640px) {
+  .pubs__issue {
+    grid-template-columns: 1fr;
+    gap: clamp(20px, 3vw, 28px);
+  }
+  .pubs__figure {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+  .pubs__figcaption {
+    text-align: center;
+  }
+}
+
+/* =========================================================================
+   §04 · News
    ========================================================================= */
 
 .news {
@@ -390,7 +505,7 @@ main {
 }
 
 /* =========================================================================
-   §04 · Contact
+   §05 · Contact
    ========================================================================= */
 
 .contact {
